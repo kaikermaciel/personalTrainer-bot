@@ -124,10 +124,11 @@ def enviar_email():
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
             smtp.login(EMAIL_SENDER, EMAIL_PASSWORD)
-            smtp.sendmail(EMAIL_SENDER, EMAIL_RECEIVER, em.as_string())
+            smtp.send_message(em) 
+            
         print(f"E-mail enviado com sucesso para {dados_hoje['titulo']}")
     except Exception as e:
-        print(f"Erro ao enviar: {e}")
+        print(f"Erro ao enviar: {type(e).__name__} - {e}")
 
 if __name__ == "__main__":
     enviar_email()
