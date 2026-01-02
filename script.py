@@ -3,13 +3,12 @@ import ssl
 import datetime
 from email.message import EmailMessage
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
 
 EMAIL_SENDER = os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+
+if not EMAIL_SENDER or not EMAIL_PASSWORD:
+    raise ValueError("EMAIL_USER e EMAIL_PASSWORD são obrigatórios.")
 
 env_list = os.environ.get('EMAIL_LIST')
 if env_list:
@@ -17,6 +16,7 @@ if env_list:
 else:
     # Fallback se esquecer de configurar a Secret
     LISTA_DESTINATARIOS = [os.environ.get('EMAIL_USER')]
+    LISTA_DESTINATARIOS = [EMAIL_SENDER]
 
 print(f"DEBUG: EMAIL_USER está carregado? {'SIM' if EMAIL_SENDER else 'NÃO'}")
 print(f"DEBUG: Tamanho da senha: {len(EMAIL_PASSWORD) if EMAIL_PASSWORD else 0}")
