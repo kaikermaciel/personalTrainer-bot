@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Instalar Bibliotecas
+        run: |
+          pip install -r requirements.txt  # <--- Faltava o '-r' aqui
       - name: Rodar Script
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}

@@ -3,6 +3,9 @@ import ssl
 import datetime
 from email.message import EmailMessage
 import os
+from dotenv import load_dotenv 
+
+load_dotenv()
 
 EMAIL_SENDER = os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
