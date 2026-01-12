@@ -25,7 +25,7 @@ ATLETAS = [
     {
         "nome": "Keke",
         "email": "macielkemerson@gmail.com",
-        "perfil": "Homem. Objetivo: Perda de peso e condicionamento físico.",
+        "perfil": "Homem. Objetivo: Fortalecimento de joelho pós cirurgico.",
         "nivel": "Iniciante/Intermediário"
     }
 ]
@@ -78,7 +78,7 @@ def gerar_treino_ia(atleta, dia_int):
     dia_str = dias_semana[dia_int]
 
     prompt = f"""
-    Aja como um personal trainer. Crie um treino para hoje: {dia_str}.
+    Aja como um personal trainer e fisioterapeuta. Crie um treino para hoje: {dia_str}.
     ALUNO: {atleta['nome']}
     PERFIL: {atleta['perfil']}
     NÍVEL: {atleta['nivel']}

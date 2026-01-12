@@ -5,7 +5,7 @@ on:
     # Atenção: O GitHub roda em UTC!
     # Manaus é UTC-4.
     # Se você quer 05:30 AM em Manaus -> 09:30 AM UTC.
-    - cron: '30 9 * * *'
+    - cron: '30 21 * * *'
   # Permite rodar manualmente na aba 'Actions' pra testar
   workflow_dispatch:
 
