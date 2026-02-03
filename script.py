@@ -22,12 +22,6 @@ ATLETAS = [
         "perfil": "Homem, 90kg, 1.71m. Objetivo: Condicionamento metabólico e queima de gordura. Calistenia.",
         "nivel": "Intermediário"
     },
-    {
-        "nome": "Keke",
-        "email": "macielkemerson@gmail.com",
-        "perfil": "Homem. Objetivo: Fortalecimento de joelho pós cirurgico.",
-        "nivel": "Iniciante/Intermediário"
-    }
 ]
 
 # Se a IA falhar
@@ -85,7 +79,7 @@ def gerar_treino_ia(atleta, dia_int):
     DIETA: Deficit Calórico alinhado com o nível de esforço do atleta.
     
     Regras:
-    1. Apenas peso do corpo (calistenia). Considere que caso seja necessários equipamentos específicos, eles podem ser encontrados em casa.
+    1. Utilize treinos que possam ser feitos na academia, seja máquinas, equipamentos ou estilo livre.
     2. Curto e direto.
     3. Responda APENAS com tags HTML <li> para os exercícios. Nada de introdução. Se quiser configurar a estética sinta-se a vontade
     4. Ao final, coloque uma frase motivacional.
